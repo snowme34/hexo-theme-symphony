@@ -34,20 +34,20 @@ site:
   title: Hexo # 页面title
   favicon: /favicon.png
   board: <p>欢迎交流与分享经验!</p> # 站点公告
-  copyright: false # 底部版权信息
+  copyright: true # 底部版权信息
 
 # config
 config:
   skin: # 主题颜色 theme-black theme-blue theme-green theme-purple
   layout: main-center # 布局方式 main-left main-center main-right
   toc: true # 是否开启文章章节目录导航
-  menu_highlight: false # 是否开启当前菜单高亮显示
+  menu_highlight: true # 是否开启当前菜单高亮显示
   thumbnail: false # enable posts thumbnail, options: true, false
   excerpt_link: Read More
 
 # Pagination
 pagination:
-  number: false
+  number: true
   prev: 
     alwayShow: true
   next:
@@ -65,9 +65,9 @@ widgets:
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
-# - category
-# - tagcloud
-# - archive  
+ - category
+ - tagcloud
+ - archive  
 
 # widget behavior
 archive_type: 'monthly'
@@ -100,13 +100,13 @@ share:
 
 # Github
 github: 
-  username: cofess  # github username
+  username: Ruffianjiang  # github username
 
 # Comment
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
 comment:
-  type: youyan  # 启用哪种评论系统
+  type: gitment  # 启用哪种评论系统
   disqus:  # enter disqus shortname here
   youyan: 
     uid: 1783844 # enter youyan uid 
@@ -117,7 +117,7 @@ comment:
     repo: 
     ClientID: 
     ClientSecret: 
-    lazy: false
+    lazy: true
 
 # douban 豆瓣书单
 # Api：
@@ -138,15 +138,15 @@ douban:
 # PV
 pv:
   busuanzi:
-    enable: false  # 不蒜子统计
+    enable: true  # 不蒜子统计
   leancloud:
-    enable: false  # leancloud统计
+    enable: true  # leancloud统计
     app_id: # leancloud <AppID>
     app_key: # leancloud <AppKey>
         
 # wordcount
 postCount:
-  enable: false
+  enable: true
   wordcount: true  # 文章字数统计
   min2read: true  # 阅读时长预计 
 
@@ -168,20 +168,20 @@ profile:
   enabled: true # Whether to show profile bar
   avatar: images/avatar.jpg
   gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
-  author: 昵称
-  author_title: Web Developer & Designer
+  author: 遗失的拂晓
+  author_title: JAVA Developer 
   author_description: 个人简介。
-  location: Shenzhen, China
-  follow: https://github.com/cofess
+  location: Shanghai, China
+  follow: https://github.com/Ruffianjiang
   # Social Links
   social:
     links:
-      github: https://github.com/cofess
-      weibo: http://weibo.com/cofess
-      twitter: https://twitter.com/iwebued
+      github: https://github.com/Ruffianjiang
+      weibo: http://weibo.com/lossingdawnn
+      # twitter: https://twitter.com/iwebued
       # facebook: /
       # dribbble: /
-      behance: https://www.behance.net/cofess
+      # behance: https://www.behance.net/cofess
       rss: atom.xml
     link_tooltip: true # enable the social link tooltip, options: true, false
   # My Skills 
@@ -195,11 +195,11 @@ profile:
     平面设计: ★★★☆☆
   # My Personal Links
   links:
-    Github: https://github.com/cofess
-    Blog: http://blog.cofess.com
-    微博: http://weibo.com/cofess
-    花瓣: http://huaban.com/cofess
-    Behance: https://www.behance.net/cofess
+    Github: https://github.com/Ruffianjiang
+    Blog: http://www.cnblogs.com/lossingdawn/
+    # 微博: http://weibo.com/cofess
+    # 花瓣: http://huaban.com/cofess
+    # Behance: https://www.behance.net/cofess
   # My Personal Labels
   labels:
     - 前端
@@ -210,9 +210,51 @@ profile:
   # My Personal Works
   works:
     name:
-      link: http://www.example.com
+      link: http://www.cnblogs.com/lossingdawn/
       date: 2016
   # My Personal Projects
   projects:
     cofess/gulp-startpro: https://github.com/cofess/gulp-startpro
     cofess/hexo-theme-pure: https://github.com/cofess/hexo-theme-pure
+
+# hexo-neat
+neat_enable: true
+neat_html:
+  enable: true
+  exclude:  
+neat_css:
+  enable: true
+  exclude:
+    - '*.min.css'
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '*.min.js' 
+    
+translate_title:
+  translate_way: google    #google | baidu | youdao
+  youdao_api_key: XXX
+  youdao_keyfrom: XXX
+  is_need_proxy: true     #true | false
+  proxy_url: http://localhost:8123
+  
+  
+markdown_it_plus:
+  highlight: true
+  html: true
+  xhtmlOut: true
+  breaks: true
+  langPrefix:
+  linkify: true
+  typographer:
+  quotes: “”‘’
+  plugins:
+    - plugin:
+        name: markdown-it-katex
+        enable: true
+    - plugin:
+        name: markdown-it-mark
+        enable: false  
