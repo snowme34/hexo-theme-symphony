@@ -4,7 +4,7 @@ A modified version of [Hexo](https://hexo.io) theme [Pure](https://github.com/co
 
 [中文](README.cn.md)
 
-[Preview](https://blog.snowme34.com/) | [iconfont](iconfont\demo.html)
+[Preview](https://blog.snowme34.com/) | [iconfont](iconfont/demo.html)
 
 [Preview of Pure](https://blog.cofess.com) | [Preview of Dawn](https://lossingdawn.top/)
 
@@ -21,7 +21,7 @@ Then modify the property `theme` of the file `hexo/_config.yml`  to `theme: symp
 
 After this modification, please make a copy of the `_config.yml.example` file called `_config.yml` and change the config accordingly.
 
-The iconfont demo can be found [here](iconfont\demo.html). It is a html file included in the repo.
+The iconfont demo can be found [here](iconfont/demo.html). It is a html file included in the repo, which can be cloned directly and opened locally.
 
 ### Files for pre-designed pages
 
@@ -44,6 +44,10 @@ git pull
 
 ## Modifications from original theme
 
+### Removed personal theme config file from repo
+
+User needs to manually create `_config.yml`.
+
 ### Fixed English translations
 
 Please note the maintenance of Chinese version is not a focus in this repo.
@@ -60,7 +64,7 @@ A list called `Languages` are added to the about-sidebar, behaving same as the `
 
 ### Footer
 
-The [footer file](layout\_common) was changed accordingly.
+The [footer file](layout/_common) was changed accordingly.
 
 ### New variables for post
 
@@ -112,6 +116,10 @@ The code block was modified. The modifications were heavily inspired by [materia
 * Add Telegram share support
 * Test Google analytics
 * Fix menu highlight bug
+* Update based on original repo
+  * [fork list](https://github.com/snowme34/hexo-theme-symphony/network/members)
+* Add demo page for iconfont
+  * After a lot of preparation
 
 ## Install plugin
 
