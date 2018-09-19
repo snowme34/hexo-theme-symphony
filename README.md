@@ -70,11 +70,15 @@ The [footer file](layout/_common) was changed accordingly.
 
 * disableDate
 
-  Set `true` to disable the data displayed.
+  Set `true` to disable the date displayed.
 
 * disableWordcount
 
   Set `true` to disable the wordcount displayed.
+
+* copyright
+
+  Set `false` to disable the copyright displayed.
 
 ### New behavior of post variable
 
