@@ -6,11 +6,11 @@
         <%- partial('post/title', {class_name: 'article-title'}) %>
       <% } %>
       <div class="article-meta">
-        <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+        <%- partial('post/date', {class_name: 'article-date', date_format: config.date_format}) %>
         <%- partial('post/category') %>
         <%- partial('post/tag') %>
         <%- partial('post/pv') %>
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="<%- url_for(post.path) %>#comments" class="article-comment-link"><%= __('article.comments') %></a></span>
+        <!-- <span class="post-comment"><i class="icon icon-comment"></i> <a href="<%- url_for(post.path) %>#comments" class="article-comment-link"><%= __('article.comments') %></a></span> -->
         <%- partial('post/wordcount') %>
       </div>
     </div>

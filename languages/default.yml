@@ -38,7 +38,7 @@ pagination:
   pageof: Page %d of %s
 widget:
   search: Search
-  board: Board
+  board: About this site
   archive: Archive
   tags: Tags
   categories: Categories
@@ -50,6 +50,7 @@ profile:
   label: Labels
   work: Works
   project: Projects
+  languages: Languages
   link: Links
 insight:
   hint: Type something...
@@ -63,7 +64,7 @@ unit:
   time: minutes
 article:
   wordcount: Word Count
-  readcount: Read Count
+  readcount: Read Time
   more: Read More
   comments: Comments
   share: Share

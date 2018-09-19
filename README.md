@@ -1,48 +1,118 @@
-# pure
+# Symphony
 
-A brand new default theme for [[Hexo](https://hexo.io)].  [Preview](http://cofess.github.io/) | [中文说明文档](README.cn.md) | [iconfont](http://blog.cofess.com/hexo-theme-pure/iconfont/demo_fontclass.html)
+A modified version of [Hexo](https://hexo.io) theme [Pure](https://github.com/cofess/hexo-theme-pure) and [Dawn](https://github.com/Ruffianjiang/hexo-theme-dawn).
 
-![](screenshot/pure.png)
+[中文](README.cn.md)
 
-## Features
+[Preview](https://blog.snowme34.com/) | [iconfont](iconfont\demo.html)
 
-- Multiple languages support
-- Comment support
-- Tags page
-- Categories page
-- Social Media
+[Preview of Pure](https://blog.cofess.com) | [Preview of Dawn](https://lossingdawn.top/)
 
-## Skins
-
-![](screenshot/pure-theme-black.png)
-
-![](screenshot/pure-theme-blue.png)
-
-![](screenshot/pure-theme-green.png)
-
-![](screenshot/pure-theme-purple.png)
-
-## Appearance
-
-[Home](http://cofess.github.io/) | [Archives](http://cofess.github.io/archives/) | [Categories](http://cofess.github.io/categories/) | [Tags](http://cofess.github.io/tags/) | [Repository](http://cofess.github.io/repository/) | [Books](http://cofess.github.io/books/) | [Links](http://cofess.github.io/links/) | [About](http://cofess.github.io/about/)
+Please read [documentation of Pure](https://github.com/cofess/hexo-theme-pure) for more details.
 
 ## Install theme
 
 Execute the following command under your `hexo` folder.
 
+```bash
+git clone https://github.com/snowme34/hexo-theme-symphony.git themes/symphony
 ```
-git clone https://github.com/cofess/hexo-theme-pure.git themes/pure
-```
-Then modify the property `theme` of the file `hexo/_config.yml`  to `theme: pure`
+Then modify the property `theme` of the file `hexo/_config.yml`  to `theme: symphony`
+
+After this modification, please make a copy of the `_config.yml.example` file called `_config.yml` and change the config accordingly.
+
+The iconfont demo can be found [here](iconfont\demo.html). It is a html file included in the repo.
+
+### Files for pre-designed pages
+
+If the pages like `Categories` and `Tags` are used, please copy the `index` files under `[blog root]/symphony/_source` to the correspond folders inside `[blog root]/source`.
+
+### Add images
+
+Please add the necessary images to the corresponding path, like `donate` and `logo`.
+
+Some of the path can be customized in the config files.
 
 ## Update theme
 
 Execute the following command to update theme.
 
-```
-cd themes/pure
+```bash
+cd themes/symphony
 git pull
 ```
+
+## Modifications from original theme
+
+### Fixed English translations
+
+Please note the maintenance of Chinese version is not a focus in this repo.
+
+In the original version, several places were hard-coded as Chinese, like titles and date. Some were hard-coded again as English and others are replaced with variables.
+
+### Added new icons
+
+Some additional icons, like Instagram, were added to the iconfont.
+
+### Additional list in about-sidebar
+
+A list called `Languages` are added to the about-sidebar, behaving same as the `Skills` sidebar.
+
+### Footer
+
+The [footer file](layout\_common) was changed accordingly.
+
+### New variables for post
+
+* disableDate
+
+  Set `true` to disable the data displayed.
+
+* disableWordcount
+
+  Set `true` to disable the wordcount displayed.
+
+### New behavior of post variable
+
+sidebar - control the sidebar
+
+`none`: Disable sidebar
+`toc`: Display Catalogue sidebar (when variable `toc` is set `true`)
+`custom`: Display customized sidebar, like the `About` page
+
+Note: the behavior above was only tested when the sidebar is on the right side of the page.
+
+### Disabled sticky bar for post
+
+The bottom bar can only be seen at the end of the post, after comment part is enabled.
+
+### Disabled comment number count
+
+The comment number count displayed for the post was removed.
+
+### Code block
+
+The code block was modified. The modifications were heavily inspired by [material-x](https://github.com/xaoxuu/hexo-theme-material-x).
+
+### Style
+
+* Changed font and line-height
+
+  Now use `Open Sans` and so on.
+
+* Updated normalize.css
+
+## Todo
+
+* Add excerpt
+* Fix the bug where the subcategories cannot be collapsed under `Categories` page
+* Add a sidebar-toggle
+* Add pink color theme
+* Add a line beneath Titles of customized pages
+* Add Telegram share support
+* Test Google analytics
+* Fix menu highlight bug
+
 ## Install plugin
 
 ### [hexo-wordcount](https://github.com/willin/hexo-wordcount)
@@ -50,27 +120,33 @@ git pull
 ```
 npm install hexo-wordcount --save
 ```
+
 ### [hexo-generator-json-content](https://github.com/alexbruno/hexo-generator-json-content)
 
 ```
 npm install hexo-generator-json-content --save
 ```
+
 ### [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)
 
 ```
 npm install hexo-generator-feed --save
 ```
+
 ### [hexo-generator-sitemap](https://github.com/hexojs/hexo-generator-sitemap)
 
 ```
 npm install hexo-generator-sitemap --save
 ```
+
 ### [hexo-generator-baidu-sitemap](https://github.com/coneycode/hexo-generator-baidu-sitemap)
 
 ```
 npm install hexo-generator-baidu-sitemap --save
 ```
+
 ## Data files
+
 Sometimes you may need to use some data in templates which is not directly available in your posts, or you want to reuse the data elsewhere. For such use cases, Hexo 3 introduced the new Data files. This feature loads YAML or JSON files in source/_data folder so you can use them in your site.
 
 For example, add links.yml in source/_data folder.
@@ -87,6 +163,7 @@ Name:
     avatar: http://example.com/avatar.png
     desc: description
 ```
+
 Add a number of links, we just need to repeat the format according to the above.
 
 ## Blog optimization
@@ -127,6 +204,7 @@ npm install hexo-baidu-url-submit --save
 ```
 
 ### [hexo-translate-title](https://github.com/cometlj/hexo-translate-title)
+
 > translate the chinese title of Hexo blog to english words automatially
 
 ```
@@ -143,6 +221,7 @@ translate_title:
   is_need_proxy: true     #true | false
   proxy_url: http://localhost:8123
 ```
+
 ## Mathjax Support
 
 ### [hexo-renderer-markdown-it-plus](https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus)

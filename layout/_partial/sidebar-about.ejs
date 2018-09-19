@@ -30,6 +30,21 @@
       </div>
     </div>
     <% } %>
+    <% if(theme.profile.languages) { %>
+    <div class="widget">
+      <h3 class="widget-title"><%= __('profile.languages') %></h3>
+      <div class="widget-body">
+        <ul class="skill-list lh-2x">
+          <% for(var i in theme.profile.languages) { %>
+          <li class="clearfix">
+            <span><%= i %></span>
+            <span class="pull-right"><%- theme.profile.languages[i] %></span>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+    <% } %>
     <% if(theme.profile.labels) { %>
     <div class="widget">
       <h3 class="widget-title"><%= __('profile.label') %></h3>
